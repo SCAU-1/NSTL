@@ -9,7 +9,7 @@ Non-Standard Template Library.非标准模板库(C++)
 
 > 大二上数据结构课设
 # 文档&说明
-接口要求参照[C++17](http://en.cppreference.com/w/cpp)标准。标注为`deprecated in C++17`或者`optional`的可能不会被实现。
+接口要求参照[C++17](http://en.cppreference.com/w/cpp)标准。标注为`deprecated in C++17`(将被弃用)或者`optional`(可选)的可能不会被实现。
 
 # 编译器支持 
 基本上支持现在主流编译器，测试列表如下
