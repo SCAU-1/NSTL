@@ -1,6 +1,8 @@
 # NSTL
-[![Build Status](https://travis-ci.org/czfshine/NSTL.svg?branch=develop)](https://travis-ci.org/czfshine/NSTL) 
-[![Coverage Status](https://coveralls.io/repos/github/czfshine/NSTL/badge.svg?branch=master)](https://coveralls.io/github/czfshine/NSTL?branch=master)
+构建状态：[![Build Status](https://travis-ci.org/czfshine/NSTL.svg?branch=develop)](https://travis-ci.org/czfshine/NSTL) 
+代码覆盖率：
+[![Coverage Status](https://coveralls.io/repos/github/czfshine/NSTL/badge.svg?branch=develop)](https://coveralls.io/github/czfshine/NSTL?branch=develop)
+
 Non-Standard Template Library.非标准模板库(C++)
 
 重写C++里面的标准模板库，包括各种容器，迭代器，配接器，配置器等，不包括STL里面的各种算法(~~因为懒~~)
