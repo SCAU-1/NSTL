@@ -78,7 +78,7 @@ gtest_main.a : gtest-all.o gtest_main.o
 # function.
 
 
-OBJS = unittest.o valstest.o
+OBJS = unittest.o valstest.o alloctest.o
 
 NSTLINCLUDE= include
 vpath %.cc $(USER_DIR)

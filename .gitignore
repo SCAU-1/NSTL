@@ -307,3 +307,7 @@ gtest/
 log.txt
 results/
 app.info
+.vscode/
+*.gcda
+*.gcno
+*.o
