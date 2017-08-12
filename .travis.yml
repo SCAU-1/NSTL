@@ -132,13 +132,11 @@ matrix:
         - cmake -G "Unix Makefiles" ..
         - cmake --build .
         - ./unittest
-before_install:
-    - eval "${MATRIX_EVAL}"
-    - pip install --user cpp-coveralls
-
 cache: ccache
 script:
+  - eval "${MATRIX_EVAL}"
+  - pip install --user cpp-coveralls
   - make -j4
   - ./NSTL_unittest
 after_success:
-  -if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; fi
+  - if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; fi
