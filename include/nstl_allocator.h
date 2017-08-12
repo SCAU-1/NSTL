@@ -45,6 +45,11 @@ public:
     void construct(T * ptr,T args){
          new ((void *)ptr) T(args);
     }
-
+    
 };
+template <class A, class U>
+    bool operator==(const allocator<A>&, const allocator<U>&) { return true; }
+    template <class A, class U>
+    bool operator!=(const allocator<A>&, const allocator<U>&) { return false; }
+
 OUT_NSTL
