@@ -10,7 +10,7 @@ matrix:
           packages:
             - g++-4.9
       env:
-         - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
+         - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9&& COVERALLS=TURE"
     - os: linux
       addons:
         apt:
@@ -19,7 +19,7 @@ matrix:
           packages:
             - g++-5
       env:
-         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
+         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5&&COVERALLS=TURE"
     - os: linux
       addons:
         apt:
@@ -28,7 +28,7 @@ matrix:
           packages:
             - g++-6
       env:
-        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6"
+        - MATRIX_EVAL="CC=gcc-6 && CXX=g++-6&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode8
       env:
@@ -90,32 +90,32 @@ matrix:
       osx_image: xcode7.3
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode8
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode8.1
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode8.2
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode8.3
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: osx
       osx_image: xcode9
       compiler: clang
       env:
-        - MATRIX_EVAL="CC=clang && CXX=clang++"
+        - MATRIX_EVAL="CC=clang && CXX=clang++&&COVERALLS=TURE"
     - os: linux
       addons:
         apt:
@@ -125,7 +125,7 @@ matrix:
             - cmake-data
             - cmake
       env:
-        - MATRIX_EVAL="echo cmake"
+        - MATRIX_EVAL="echo cmake&&COVERALLS=TURE"
       script:
         - mkdir build
         - cd build 
@@ -141,4 +141,4 @@ script:
   - make -j4
   - ./NSTL_unittest
 after_success:
-  - python coveralls.py -e gtest
+  -if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; fi
