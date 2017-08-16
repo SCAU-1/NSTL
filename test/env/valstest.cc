@@ -1,8 +1,5 @@
 #include "gtest/gtest.h"
-
-
 #include "nstl_vals.h"
-
 int in=2;
 
 IN_NSTL

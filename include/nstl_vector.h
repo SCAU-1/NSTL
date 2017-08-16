@@ -21,5 +21,5 @@ private:
 public:
     //
 
-}
+};
 OUT_NSTL

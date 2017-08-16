@@ -9,7 +9,7 @@ if (COMMAND pre_project_set_up_hermetic_build)
   pre_project_set_up_hermetic_build()
 endif()
 
-project(gtest CXX C)
+project(NSTL CXX C)
 cmake_minimum_required(VERSION 2.6.4)
 
 include(${GTESTDIR}/cmake/internal_utils.cmake)
@@ -18,7 +18,8 @@ config_compiler_and_linker()
 # Where Google Test's .h files can be found.
 include_directories(
   ${GTESTDIR}/include
-  ${GTESTDIR})
+  ${GTESTDIR}
+  ./include)
 
 # Where Google Test's libraries can be found.
 link_directories(./${GTESTDIR}/src)
