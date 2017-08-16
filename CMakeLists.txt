@@ -9,7 +9,7 @@ if (COMMAND pre_project_set_up_hermetic_build)
   pre_project_set_up_hermetic_build()
 endif()
 
-project(gtest CXX C)
+project(NSTL CXX C)
 cmake_minimum_required(VERSION 2.6.4)
 
 include(${GTESTDIR}/cmake/internal_utils.cmake)
