@@ -18,7 +18,8 @@ config_compiler_and_linker()
 # Where Google Test's .h files can be found.
 include_directories(
   ${GTESTDIR}/include
-  ${GTESTDIR})
+  ${GTESTDIR}
+  ./include)
 
 # Where Google Test's libraries can be found.
 link_directories(./${GTESTDIR}/src)
