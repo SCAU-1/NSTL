@@ -58,4 +58,5 @@ install(TARGETS gtest gtest_main
 install(DIRECTORY ${GTESTDIR}/include/gtest
   DESTINATION include)
 ################GTEST END################################################
-cxx_executable(unittest test gtest_main ./test/unittest.cc)
+
+ADD_EXECUTABLE( abc test/list.cpp)
