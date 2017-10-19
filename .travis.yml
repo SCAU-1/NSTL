@@ -1,0 +1,23 @@
+language: cpp
+os: linux
+  addons:
+    apt:
+      sources:
+        - george-edison55-precise-backports
+      packages:
+        - cmake-data
+        - cmake
+env:
+    - MATRIX_EVAL="echo cmake&&COVERALLS=TURE"
+
+cache: ccache
+script:
+  - eval "${MATRIX_EVAL}"
+  - pip install --user cpp-coveralls
+  - mkdir build
+  - cd build 
+  - cmake -G "Unix Makefiles" ..
+  - cmake --build .
+  - ./NSTL
+after_success:
+  - if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; fi
