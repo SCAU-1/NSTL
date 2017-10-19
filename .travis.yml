@@ -20,4 +20,4 @@ script:
   - cmake --build .
   - ./NSTL
 after_success:
-  - if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; fi
+  - if [[ "$COVERALLS" == "TURE" ]]; then  python coveralls.py -e gtest ; f
