@@ -1,6 +1,7 @@
 /*********************************************
 * NSTL - Non-Standard Template Library.      *
       Common Values
+      一些全局常量
 * @Author: czfshine                           
 * @Date: 2017-08-09 08:35:32 
 */
