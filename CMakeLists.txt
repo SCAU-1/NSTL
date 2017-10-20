@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.2)
 project(NSTL_)
 set(CMAKE_CXX_STANDARD 17)
 add_definitions(-DWINVER=0x0500)
