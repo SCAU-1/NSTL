@@ -4,7 +4,7 @@
 
 #include "gtest/gtest.h"
 #include <vector>
-#include "nstl_ttraits.h"
+#include "nstl_type_traits.h"
 namespace {
 
     /**
