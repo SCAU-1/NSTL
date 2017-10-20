@@ -25,6 +25,9 @@ namespace {
     void test_type_ptrint(int* i){
         i++;
     }
+    void test_type_constptrint(const int* i){
+        i+1;
+    }
 
     void test_type_string(string i){
         i.begin();
@@ -69,7 +72,7 @@ namespace {
 
     template <class T>
     void test_ptr(T val){
-        typename NSTLSPACE::iterator_traits<T>::value_type i;
+        typename NSTLSPACE::iterator_traits<T>::value_type i=1;
         test_type_int(i);
 
         /*
@@ -77,10 +80,28 @@ namespace {
          *
         NSTLSPACE::iterator_traits<typename T::iterator>::reference(1);
         test_type_refint(j);*/
-
-        typename  NSTLSPACE::iterator_traits<T>::pointer j;
+        int b=1;
+        typename  NSTLSPACE::iterator_traits<T>::pointer j=&b;
         test_type_ptrint(j);
     }
+
+    template <class T>
+    void test_const_ptr(T val){
+        typename NSTLSPACE::iterator_traits<T>::value_type i=1;
+        test_type_int(i);
+
+        /*
+         * TODO:unknown how to test
+         *
+        NSTLSPACE::iterator_traits<typename T::iterator>::reference(1);
+        test_type_refint(j);*/
+        const int b=1;
+        typename  NSTLSPACE::iterator_traits<T>::pointer j=&b;
+        test_type_constptrint(j);
+    }
+
+
+
     TEST(TRAITE,NORMAL){
         std::vector<int> xs;
         test_int(xs);
@@ -96,6 +117,6 @@ namespace {
     TEST(TRAITE,POINTER2CONST){
         const int b=1;
         const int * a=&b;
-        test_ptr(a);
+        test_const_ptr(a);
     }
 }
