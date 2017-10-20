@@ -1,14 +1,14 @@
 language: cpp
 os: linux
-  addons:
-    apt:
-      sources:
-        - george-edison55-precise-backports
-      packages:
-        - cmake-data
-        - cmake
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake-data
+      - cmake
 env:
-    - MATRIX_EVAL="echo cmake&&COVERALLS=TURE"
+  - MATRIX_EVAL="echo cmake&&COVERALLS=TURE"
 
 cache: ccache
 script:
