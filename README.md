@@ -1,5 +1,5 @@
 # NSTL
-构建状态：[![Build Status](https://travis-ci.org/czfshine/NSTL.svg?branch=develop)](https://travis-ci.org/czfshine/NSTL) 
+构建状态：[![Build Status](https://travis-ci.org/SCAU-1/NSTL.svg?branch=master)](https://travis-ci.org/SCAU-1/NSTL)
 代码覆盖率：
 [![Coverage Status](https://coveralls.io/repos/github/czfshine/NSTL/badge.svg?branch=develop)](https://coveralls.io/github/czfshine/NSTL?branch=develop)
 
