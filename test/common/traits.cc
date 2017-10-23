@@ -6,8 +6,7 @@
 
 #include "gtest/gtest.h"
 #include "nstl_vals.h"
-#include "nstl_type_traits.h"
-
+#include "nstl_vector.h"
 #include <vector>
 #include <string>
 
@@ -106,6 +105,13 @@ namespace {
         std::vector<int> xs;
         test_int(xs);
         std::vector<string> xss;
+        test_string(xss);
+    }
+
+    TEST(TRAITE,VECTOR){
+        NSTLSPACE::vector<int> xs;
+        test_int(xs);
+        NSTLSPACE::vector<string> xss;
         test_string(xss);
     }
 
