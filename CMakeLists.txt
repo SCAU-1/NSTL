@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(NSTL_)
 set(CMAKE_CXX_STANDARD 11)
-add_definitions(-DWINVER=0x0500)
+add_definitions(-DWINVER=0x0500 -Wall)
 
 add_subdirectory(gtest)
 include_directories(include)
